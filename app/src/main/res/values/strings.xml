@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">MpAndroidChart</string>
     <string name="continuar">Continuar</string>
+    <string name="my_investments">Meus investimentos</string>
+    <string name="total_invested">R$ 20.199.200,00</string>
+    <string name="income">Rendimentos</string>
+    <string name="income_value">R$ 1.741,27</string>
+    <string name="nothing_selected">Nada selecionado</string>
 </resources>
