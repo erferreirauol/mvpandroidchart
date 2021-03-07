@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <com.github.mikephil.charting.charts.PieChart
-        android:id="@+id/mainPieChart"
+        android:id="@+id/pieChartMainGraphic"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,13 +19,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="@id/mainPieChart"
-        app:layout_constraintEnd_toEndOf="@id/mainPieChart"
+        app:layout_constraintBottom_toBottomOf="@id/pieChartMainGraphic"
+        app:layout_constraintEnd_toEndOf="@id/pieChartMainGraphic"
         app:layout_constraintGuide_percent="0.5"
-        app:layout_constraintStart_toStartOf="@id/mainPieChart"
-        app:layout_constraintTop_toTopOf="@id/mainPieChart" />
+        app:layout_constraintStart_toStartOf="@id/pieChartMainGraphic"
+        app:layout_constraintTop_toTopOf="@id/pieChartMainGraphic" />
 
-    <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -35,46 +35,46 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/mainMyInvestimentsTvLabel"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextViewMyInvestimentsLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/my_investments" />
 
-        <TextView
-            android:id="@+id/mainMyInvestimentsTv"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextViewMyInvestiments"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/total_invested"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="@dimen/dimensOf18sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/mainMyRendimentsTvLabel"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextViewMyIncomeLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="@dimen/dimensOf32dp"
             android:text="@string/income" />
 
-        <TextView
-            android:id="@+id/mainMyRendimentsTv"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextViewMyIncomeValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/income_value"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="@dimen/dimensOf18sp"
             android:textStyle="bold" />
-    </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <Button
-        android:id="@+id/btnContinue"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonContinue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/continuar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/mainPieChart" />
+        app:layout_constraintTop_toTopOf="@id/pieChartMainGraphic" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

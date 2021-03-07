@@ -34,11 +34,11 @@ class SecondScreenActivity : AppCompatActivity() {
 
     private fun setupPieChart() {
         setupPieChartConfigs()
-        binding.mainPieChart.data = getPieData()
+        binding.pieChartSecondGraphic.data = getPieData()
     }
 
     private fun setupPieChartConfigs() {
-        binding.mainPieChart.apply {
+        binding.pieChartSecondGraphic.apply {
             isDrawHoleEnabled = true
             setHoleColor(Color.TRANSPARENT)
             setDrawEntryLabels(false)

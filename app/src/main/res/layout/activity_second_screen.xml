@@ -7,7 +7,7 @@
     tools:context=".SecondScreenActivity">
 
     <com.github.mikephil.charting.charts.PieChart
-        android:id="@+id/mainPieChart"
+        android:id="@+id/pieChartSecondGraphic"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="@dimen/dimensOf16dp"
