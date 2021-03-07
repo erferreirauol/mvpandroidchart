@@ -24,6 +24,13 @@ class SecondScreenActivity : AppCompatActivity() {
         intent.getFloatExtra(ARG_OTHER_INVESTMENTS, 0F)
     }
 
+    private val pieDataSet: List<PieEntry> by lazy {
+        arrayListOf<PieEntry>().apply {
+            add(PieEntry(investmentValue, FIXED_INCOME))
+            add(PieEntry(otherInvestmentValue, ARG_OTHER_INVESTMENTS))
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySecondScreenBinding.inflate(layoutInflater)
@@ -57,7 +64,7 @@ class SecondScreenActivity : AppCompatActivity() {
     }
 
     private fun getPieData(): PieData {
-        val pieDataSet = PieDataSet(getPieDataSet(), "").apply {
+        val pieDataSet = PieDataSet(pieDataSet, "").apply {
             setDrawValues(false)
             colors = listOf(
                 ContextCompat.getColor(applicationContext, R.color.teal_700),
@@ -68,16 +75,9 @@ class SecondScreenActivity : AppCompatActivity() {
         return PieData(pieDataSet)
     }
 
-    private fun getPieDataSet(): ArrayList<PieEntry> {
-        return arrayListOf<PieEntry>().apply {
-            add(PieEntry(investmentValue, FIXED_INCOME))
-            add(PieEntry(otherInvestmentValue, ARG_OTHER_INVESTMENTS))
-        }
-    }
-
     companion object {
-        private const val ARG_OTHER_INVESTMENTS = "outros investimentos"
-        private const val ARG_INVESTMENT_VALUE = "investment value"
+        private const val ARG_OTHER_INVESTMENTS = "ARG_OTHER_INVESTMENTS"
+        private const val ARG_INVESTMENT_VALUE = "ARG_INVESTMENT_VALUE"
 
         fun newInstance(context: Context, totalValue: Float, investmentValue: Float) {
             val intent = Intent(context, SecondScreenActivity::class.java).apply {
