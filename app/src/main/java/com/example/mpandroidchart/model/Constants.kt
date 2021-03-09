@@ -1,4 +1,4 @@
-package com.example.mpandroidchart
+package com.example.mpandroidchart.model
 
 object Constants {
 
@@ -9,4 +9,5 @@ object Constants {
     const val PRIVATE_PENSION = "Previdência Privada"
 
     const val stringEmpty = ""
+    const val totalInvested = "R$ 100.000,00"
 }

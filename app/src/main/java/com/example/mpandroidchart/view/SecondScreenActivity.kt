@@ -1,4 +1,4 @@
-package com.example.mpandroidchart
+package com.example.mpandroidchart.view
 
 import android.content.Context
 import android.content.Intent
@@ -6,7 +6,8 @@ import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.example.mpandroidchart.Constants.FIXED_INCOME
+import com.example.mpandroidchart.model.Constants.FIXED_INCOME
+import com.example.mpandroidchart.R
 import com.example.mpandroidchart.databinding.ActivitySecondScreenBinding
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet

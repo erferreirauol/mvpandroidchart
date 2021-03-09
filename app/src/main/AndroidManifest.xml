@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MpAndroidChart">
-        <activity android:name=".MainActivity">
+        <activity android:name=".view.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,8 +17,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SecondScreenActivity"
-            android:parentActivityName=".MainActivity" />
+            android:name=".view.SecondScreenActivity"
+            android:parentActivityName=".view.MainActivity" />
     </application>
 
 </manifest>
