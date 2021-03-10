@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/list_product_height">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageViewCircleId"
+        android:layout_width="@dimen/dimensOf12dp"
+        android:layout_height="@dimen/dimensOf12dp"
+        android:layout_marginStart="@dimen/dimensOf16dp"
+        android:layout_marginLeft="@dimen/dimensOf16dp"
+        android:layout_marginTop="@dimen/dimensOf16dp"
+        android:layout_marginBottom="@dimen/dimensOf16dp"
+        android:src="@drawable/circle_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextViewTitleProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimensOf16dp"
+        android:layout_marginLeft="@dimen/dimensOf16dp"
+        app:layout_constraintBottom_toBottomOf="@id/appCompatImageViewCircleId"
+        app:layout_constraintStart_toEndOf="@id/appCompatImageViewCircleId"
+        app:layout_constraintTop_toTopOf="@id/appCompatImageViewCircleId"
+        tools:text="Renda Fixa" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatImageViewValueProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimensOf16dp"
+        android:layout_marginRight="@dimen/dimensOf16dp"
+        app:layout_constraintBottom_toBottomOf="@id/appCompatImageViewIndicator"
+        app:layout_constraintEnd_toStartOf="@id/appCompatImageViewIndicator"
+        app:layout_constraintTop_toTopOf="@id/appCompatImageViewIndicator"
+        tools:text="R$ 80.000,00" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageViewIndicator"
+        android:layout_width="@dimen/dimensOf16dp"
+        android:layout_height="@dimen/dimensOf16dp"
+        android:layout_marginTop="@dimen/dimensOf16dp"
+        android:layout_marginEnd="@dimen/dimensOf16dp"
+        android:layout_marginRight="@dimen/dimensOf16dp"
+        android:layout_marginBottom="@dimen/dimensOf16dp"
+        android:src="@drawable/ic_arrow_forward_foreground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewDivisor"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
