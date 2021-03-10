@@ -12,37 +12,21 @@ import com.example.mpandroidchart.databinding.ActivitySecondScreenBinding
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
+import kotlin.math.roundToInt
 
 class SecondScreenActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySecondScreenBinding
 
-    private val investmentValue by lazy {
-        intent.getFloatExtra(ARG_INVESTMENT_VALUE, 0F)
-    }
-
-    private val otherInvestmentValue by lazy {
-        intent.getFloatExtra(ARG_OTHER_INVESTMENTS, 0F)
-    }
-
-    private val pieDataSet: List<PieEntry> by lazy {
-        arrayListOf<PieEntry>().apply {
-            add(PieEntry(investmentValue, FIXED_INCOME))
-            add(PieEntry(otherInvestmentValue, ARG_OTHER_INVESTMENTS))
-        }
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySecondScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         setupPieChart()
     }
 
     private fun setupPieChart() {
         setupPieChartConfigs()
-        binding.pieChartSecondGraphic.data = getPieData()
     }
 
     private fun setupPieChartConfigs() {
@@ -51,30 +35,14 @@ class SecondScreenActivity : AppCompatActivity() {
             setHoleColor(Color.TRANSPARENT)
             setDrawEntryLabels(false)
             holeRadius = 85f
-            centerText = setUpCenterText()
             setCenterTextSize(24F)
             description.isEnabled = false
             legend.isEnabled = false
             setTouchEnabled(false)
+            setEntry(40.1231F, R.color.teal_700)
         }
     }
 
-    private fun setUpCenterText(): CharSequence {
-        val percentageValue = (investmentValue / (investmentValue + otherInvestmentValue)) * 100
-        return String.format("%.0f%%", percentageValue)
-    }
-
-    private fun getPieData(): PieData {
-        val pieDataSet = PieDataSet(pieDataSet, "").apply {
-            setDrawValues(false)
-            colors = listOf(
-                ContextCompat.getColor(applicationContext, R.color.teal_700),
-                ContextCompat.getColor(applicationContext, R.color.cinza_claro)
-            )
-            sliceSpace = 3f
-        }
-        return PieData(pieDataSet)
-    }
 
     companion object {
         private const val ARG_OTHER_INVESTMENTS = "ARG_OTHER_INVESTMENTS"
