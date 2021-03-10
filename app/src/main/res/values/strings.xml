@@ -6,4 +6,6 @@
     <string name="income">Rendimentos</string>
     <string name="income_value">R$ 1.741,27</string>
     <string name="nothing_selected">Nada selecionado</string>
+    <string name="percent">%1$s\%%</string>
+    <string name="total_invested_label">Total investido</string>
 </resources>
