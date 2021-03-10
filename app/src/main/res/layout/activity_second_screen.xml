@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".SecondScreenActivity">
 
-    <com.example.mpandroidchart.CustomPieChart
+    <com.example.mpandroidchart.OneEntryPieChart
         android:id="@+id/pieChartSecondGraphic"
         android:layout_width="0dp"
         android:layout_height="0dp"
