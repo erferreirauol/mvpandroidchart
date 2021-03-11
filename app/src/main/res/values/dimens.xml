@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="dimensOf5dp">5dp</dimen>
+    <dimen name="dimensOf12dp">12dp</dimen>
     <dimen name="dimensOf16dp">16dp</dimen>
     <dimen name="dimensOf18sp">18sp</dimen>
     <dimen name="dimensOf32dp">32dp</dimen>
-    <dimen name="dimensOf12dp">12dp</dimen>
+    <dimen name="dimensOf24dp">24dp</dimen>
     <dimen name="list_product_height">44dp</dimen>
 </resources>

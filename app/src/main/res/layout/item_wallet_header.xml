@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/secondScreenTvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimensOf16dp"
+            android:layout_marginTop="@dimen/dimensOf16dp"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Renda Variável" />
+
+
+        <com.example.mpandroidchart.OneEntryPieChart
+            android:id="@+id/pieChartSecondGraphic"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/dimensOf16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/verticalGuideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/secondScreenTvTitle" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:layout_marginVertical="@dimen/dimensOf16dp"
+            android:background="@color/cinza_claro"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/verticalGuideline"
+            app:layout_constraintTop_toTopOf="@id/pieChartSecondGraphic" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/verticalGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/secondScreenFirstHeaderLabelTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimensOf16dp"
+            android:layout_marginVertical="@dimen/dimensOf16dp"
+            app:layout_constraintStart_toStartOf="@id/verticalGuideline"
+            app:layout_constraintTop_toTopOf="@id/pieChartSecondGraphic"
+            tools:text="Valor investido" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/secondScreenFirstHeaderValuelTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/secondScreenFirstHeaderLabelTv"
+            app:layout_constraintTop_toBottomOf="@id/secondScreenFirstHeaderLabelTv"
+            tools:text="R$ 45123,30" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/secondScreenSecondHeaderLabelTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimensOf16dp"
+            app:layout_constraintStart_toStartOf="@id/secondScreenFirstHeaderLabelTv"
+            app:layout_constraintTop_toBottomOf="@id/secondScreenFirstHeaderValuelTv"
+            tools:text="Saldo alocado" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/secondScreenSecondHeadeValuelTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/secondScreenFirstHeaderLabelTv"
+            app:layout_constraintTop_toBottomOf="@id/secondScreenSecondHeaderLabelTv"
+            tools:text="R$ 45123,30" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+

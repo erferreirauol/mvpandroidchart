@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/dimensOf12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/dimensOf16dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/itemInvestmentTvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimensOf16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="CDB PagBank" />
+
+        <ImageView
+            android:id="@+id/fgcIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginHorizontal="@dimen/dimensOf16dp"
+            android:src="@drawable/circle_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/itemInvestmentTvDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/itemInvestmentTvTitle"
+            app:layout_constraintTop_toBottomOf="@id/itemInvestmentTvTitle"
+            tools:text="Banco Seguro" />
+
+        <View
+            android:id="@+id/starterView"
+            android:layout_width="4dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimensOf12dp"
+            app:layout_constraintBottom_toBottomOf="@id/grossValueValue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/itemInvestmentTvDescription"
+            tools:background="@color/teal_200" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/grossValueLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimensOf12dp"
+            app:layout_constraintStart_toEndOf="@+id/starterView"
+            app:layout_constraintTop_toTopOf="@id/starterView"
+            tools:text="Valor bruto" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/grossValueValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimensOf12dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/starterView"
+            app:layout_constraintTop_toBottomOf="@id/grossValueLabel"
+            tools:text="R$ 25.000,00" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/verticalGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/rentabilityLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/verticalGuideline"
+            app:layout_constraintTop_toTopOf="@id/starterView"
+            tools:text="Rentabilidade" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/rentabilityValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/rentabilityLabel"
+            app:layout_constraintTop_toBottomOf="@id/rentabilityLabel"
+            tools:text="R$ 25.000,00" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/footerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimensOf32dp"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textColor="@color/teal_200"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/grossValueValue"
+            tools:text="VER DETALHES" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimensOf12dp"
+            android:background="@color/cinza_claro"
+            app:layout_constraintBottom_toBottomOf="@id/grossValueValue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/itemInvestmentTvDescription" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

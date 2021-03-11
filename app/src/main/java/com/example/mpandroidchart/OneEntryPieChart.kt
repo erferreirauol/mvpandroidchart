@@ -25,7 +25,7 @@ class OneEntryPieChart(context: Context?, attrs: AttributeSet?) : PieChart(conte
         return PieDataSet(pieEntries, "").apply {
             setDrawValues(false)
             colors = listOf(
-                ContextCompat.getColor(context, color),
+                color,
                 ContextCompat.getColor(context, R.color.cinza_claro)
             )
             sliceSpace = 3f

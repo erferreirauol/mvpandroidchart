@@ -81,11 +81,10 @@ class MainActivity : AppCompatActivity(), ProductItemListener {
         binding.recyclerViewInvestments.adapter = adapter
     }
 
-    private fun goToSecondScreen() {
+    private fun goToSecondScreen(catalogType: String) {
         SecondScreenActivity.newInstance(
             context = this@MainActivity,
-            totalValue = 4000f,
-            investmentValue = 6000F
+            catalogType = catalogType
         )
     }
 
@@ -109,6 +108,6 @@ class MainActivity : AppCompatActivity(), ProductItemListener {
 
     override fun onClickedProduct(product: Product) {
         //TODO passar as informações necessárias para a SecondScreen
-        goToSecondScreen()
+        goToSecondScreen(product.catalog)
     }
 }
