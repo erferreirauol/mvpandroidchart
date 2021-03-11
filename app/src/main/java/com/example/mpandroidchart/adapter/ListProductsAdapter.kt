@@ -12,7 +12,7 @@ import com.example.mpandroidchart.model.Product
 
 class ListProductsAdapter(
     private val listener: ProductItemListener
-) : RecyclerView.Adapter<UserViewHolder>() {
+) : RecyclerView.Adapter<InvestmentViewHolder>() {
 
     private val productsList = ArrayList<Product>()
     private var catalogProduct: String? = null
@@ -28,23 +28,23 @@ class ListProductsAdapter(
         notifyDataSetChanged()
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): InvestmentViewHolder {
         val binding: ItemProductBinding = ItemProductBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
             false
         )
-        return UserViewHolder(binding, listener)
+        return InvestmentViewHolder(binding, listener)
     }
 
     override fun getItemCount(): Int = productsList.size
 
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
-    override fun onBindViewHolder(holder: UserViewHolder, position: Int) =
+    override fun onBindViewHolder(holder: InvestmentViewHolder, position: Int) =
         holder.bind(productsList[position], catalogProduct)
 }
 
-class UserViewHolder(
+class InvestmentViewHolder(
     private val itemBinding: ItemProductBinding,
     private val listener: ProductItemListener
 ) : RecyclerView.ViewHolder(itemBinding.root), View.OnClickListener {

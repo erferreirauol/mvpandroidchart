@@ -1,8 +1,9 @@
-package com.example.mpandroidchart
+package com.example.mpandroidchart.components
 
 import android.content.Context
 import android.util.AttributeSet
 import androidx.core.content.ContextCompat
+import com.example.mpandroidchart.R
 import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
